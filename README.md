@@ -8,6 +8,10 @@ skinview3d
 
 Three.js powered Minecraft skin viewer.
 
+# 该Fork和原版的区别
+ - 这个Fork是基于原项目进行二次开发的版本，该版本是专门为MOS启动器 皮肤预览功能所定制的
+ - 二次开发的代码存放在`custom`目录下
+
 # Features
 * 1.8 Skins
 * HD Skins

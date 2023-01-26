@@ -1,0 +1,69 @@
+<html><head>
+    <script type="text/javascript" src="js/skinview3d.bundle.js"></script>
+</head>
+
+<body>
+    <div style="text-align: center;width: 100%;height: 100%;">
+        <canvas id="skin_container" data-engine="three.js r142" width="400" height="600" style="text-align: center;touch-action: none;/* width: 100%; *//* height: 100%; */position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);"></canvas>
+    </div>
+    
+    
+    <script type="text/javascript">
+        let skinViewer = new skinview3d.SkinViewer({
+            canvas: document.getElementById("skin_container"),
+            width: 300,
+            height: 400,
+            skin: "https://textures.minecraft.net/texture/f5713c64dd8f6c17399b2aed8a1a6cb2ac619be037a7fd1a7b9e4ba1f4571720"
+        });
+
+        // Change viewer size
+        skinViewer.width = 400;
+        skinViewer.height = 600;
+
+        // // Load another skin
+        // skinViewer.loadSkin("img/skin2.png");
+
+        // Load a cape
+        skinViewer.loadCape("img/cape.png");
+
+        // // Load an elytra (from a cape texture)
+        // skinViewer.loadCape("img/cape.png", { backEquipment: "elytra" });
+
+        // Unload(hide) the cape / elytra
+        skinViewer.loadCape(true);
+
+        // // Set the background color
+        // skinViewer.background = 0x5a76f3;
+
+        // Set the background to a normal image
+        //skinViewer.loadBackground("img/background.png");
+        skinViewer.loadBackground("");
+
+        // // Set the background to a panoramic image
+        // skinViewer.loadPanorama("img/panorama.png");
+
+        // Change camera FOV
+        skinViewer.fov = 70;
+
+        // Zoom out
+        skinViewer.zoom = 0.3;
+
+        // Rotate the player
+        skinViewer.autoRotate = true;
+
+        // Apply an animation
+        skinViewer.animation = new skinview3d.WalkingAnimation();
+
+        // Set the speed of the animation
+        skinViewer.animation.speed = 3;
+
+        // Pause the animation
+        skinViewer.animation.paused = true;
+
+        // Remove the animation
+        skinViewer.animation = null;
+    </script>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon="{&quot;rayId&quot;:&quot;78f94c176e194d4b&quot;,&quot;version&quot;:&quot;2022.11.3&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;a3f559c5a79d42b9a8c6d34d29922f30&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+
+
+</body></html>
